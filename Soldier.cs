@@ -14,10 +14,10 @@ namespace War
 
         public bool IsDamageMultiplier { get; private set; }    // Множитель урона
         public bool IsMultipleUnitAttack { get; private set; }  // Умение атаковать нескольких солдат
-        public bool IsAttackedBy { get; private set;}           // Атакован
-        public bool IsRepeatAttack {  get; private set; }       // Умение повторить атаку
+        public bool IsAttackedBy { get; private set; }           // Атакован
+        public bool IsRepeatAttack { get; private set; }       // Умение повторить атаку
 
-        public Soldier(int health,int damage,int armor, bool isDamageMultiplier, bool isMultipleUnitAttack, bool isAttackedBy, bool isRepeatAttack)
+        public Soldier(int health, int damage, int armor, bool isDamageMultiplier, bool isMultipleUnitAttack, bool isAttackedBy, bool isRepeatAttack)
         {
             Health = health;
 
@@ -34,23 +34,42 @@ namespace War
             IsRepeatAttack = isRepeatAttack;
         }
 
-        public void TakeDmage(int damage) 
+        public void TakeDmage(Soldier soldier)
         {
             int minValueArmor = 0;
 
             if (Armor <= minValueArmor)
             {
-                Health -= damage;
+                Health -= soldier.Damage;
             }
-            else 
+            else
             {
-                Armor -= damage;
+                Armor -= soldier.Damage;
             }
         }
 
-        public void Attack() 
+        public void Attack()
         {
-            
+
+        }
+
+        public void ShowInfo()
+        {
+            Console.WriteLine($"  _________________________________\n" +
+            $" |Солдат: Здоровье -\t\t{Health}|\n" +
+            $" |---------------------------------|\n" +
+            $" |Дамаг -\t\t\t{Damage} |\n" +
+            $" |---------------------------------|\n" +
+            $" |Броня -\t\t\t{Armor}|\n" +
+            $" |---------------------------------|\n" +
+            $" |Множитель урона -\t      {IsDamageMultiplier}|\n" +
+            $" |---------------------------------|\n" +
+            $" |Атака нескольких солдат -   {IsMultipleUnitAttack}|\n" +
+            $" |---------------------------------|\n" +
+            $" |Подвергался атаке -\t      {IsAttackedBy}|\n" +
+            $" |---------------------------------|\n" +
+            $" |Умение повторить атаку -    {IsRepeatAttack}|\n" +
+            $" |_________________________________|");
         }
     }
 }
