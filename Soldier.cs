@@ -12,9 +12,11 @@ namespace War
         public int Damage { get; private set; }
         public int Armor { get; private set; }
 
-        public bool isDamageMultiplier { get; private set; } // Множитель урона
-        public bool isMultipleUnitAttack { get; private set; } // Умение атаковать нескольких солдат
-        public bool isAttackedBy { get; private set;} // Атакован
+        public bool isDamageMultiplier { get; private set; }    // Множитель урона
+        public bool isMultipleUnitAttack { get; private set; }  // Умение атаковать нескольких солдат
+        public bool isAttackedBy { get; private set;}           // Атакован
+        public bool isRepeatAttack {  get; private set; }       // Умение повторить атаку
+
         public Soldier() { }
 
         public void TakeDmage(int damage) 
