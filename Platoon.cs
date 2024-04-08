@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace War
 {
     internal class Platoon
-    {
+    {// список солдат
+    
     }
 }
