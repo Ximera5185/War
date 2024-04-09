@@ -20,8 +20,6 @@ namespace War
 
             IsMultipleUnitAttack = isMultipleUnitAttack;
 
-            IsAttackedBy = isAttackedBy;
-
             IsRepeatAttack = isRepeatAttack;
         }
 
@@ -31,7 +29,6 @@ namespace War
 
         public bool IsDamageMultiplier { get; private set; }    // Множитель урона
         public bool IsMultipleUnitAttack { get; private set; }  // Умение атаковать нескольких солдат
-       // public bool IsAttackedBy { get; private set; }           // Атакован
         public bool IsRepeatAttack { get; private set; }       // Умение повторить атаку
 
 
