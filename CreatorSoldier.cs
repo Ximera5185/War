@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace War
 {
-    internal class Platoon
+    internal class CreatorSoldier
     {
-        private List<Soldier> soldiers = new List<Soldier>();
+        
     }
 }
