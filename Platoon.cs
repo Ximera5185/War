@@ -8,6 +8,6 @@ namespace War
 {
     internal class Platoon
     {
-        private List<Soldier> soldiers = new List<Soldier>();
+        private List<Soldier> _soldiers = new List<Soldier>();
     }
 }
