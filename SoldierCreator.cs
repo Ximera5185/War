@@ -34,5 +34,7 @@ namespace War
 
             return bools [s_random.Next(bools.Length)];
         }
+
+        //TODO Создать меьод
     }
 }
