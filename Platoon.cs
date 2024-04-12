@@ -29,10 +29,5 @@ namespace War
                 soldier.ShowInfo();
             }
         }
-
-        private void AddSoldier(List<Soldier> soldiers)
-        {
-
-        }
     }
 }
