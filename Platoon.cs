@@ -14,12 +14,13 @@ namespace War
 
         public Platoon()
         {
-            CreatorSoldier creatorSoldier = new CreatorSoldier();
+            SoldierCreator creatorSoldier = new SoldierCreator();
+           
 
-            _soldiers.Add(creatorSoldier.CreateMod(_value, _value, _value, false, false, false));
-            _soldiers.Add(creatorSoldier.CreateMod(_value, _value, _value, true, false, false));
-            _soldiers.Add(creatorSoldier.CreateMod(_value, _value, _value, false, true, false));
-            _soldiers.Add(creatorSoldier.CreateMod(_value, _value, _value, false, true, true));
+            for (int i = 0; i < 10; i++)
+            {
+                _soldiers.Add(creatorSoldier.Create());
+            }
         }
 
         public void ShowInfo()
