@@ -8,6 +8,9 @@ namespace War
 {
     internal class CreatorSoldier
     {
-        
+        public Soldier CreateMod(int health, int damage, int armor, bool isDamageMultiplier, bool isMultipleUnitAttack, bool isRepeatAttack)
+        {
+            return new Soldier( health,  damage,  armor,  isDamageMultiplier,  isMultipleUnitAttack,  isRepeatAttack);
+        }
     }
 }

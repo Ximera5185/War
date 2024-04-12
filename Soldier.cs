@@ -8,7 +8,7 @@ namespace War
 {
     internal class Soldier
     {
-        public Soldier(int health, int damage, int armor, bool isDamageMultiplier, bool isMultipleUnitAttack, bool isAttackedBy, bool isRepeatAttack)
+        public Soldier(int health, int damage, int armor, bool isDamageMultiplier, bool isMultipleUnitAttack, bool isRepeatAttack)
         {
             Health = health;
 
@@ -64,7 +64,6 @@ namespace War
             $" |---------------------------------|\n" +
             $" |Атака нескольких солдат -   {IsMultipleUnitAttack}|\n" +
             $" |---------------------------------|\n" +
-            $" |Подвергался атаке -\t      {IsAttackedBy}|\n" +
             $" |---------------------------------|\n" +
             $" |Умение повторить атаку -    {IsRepeatAttack}|\n" +
             $" |_________________________________|");
