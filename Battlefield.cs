@@ -24,7 +24,6 @@ namespace War
             platoon.ShowInfo();
 
             platoon2.ShowInfo();
-
         }
     }
 }
