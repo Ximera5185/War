@@ -10,9 +10,9 @@ namespace War
     {
         static void Main(string [] args)
         {
-            Battlefield battlefield = new Battlefield();
+            BasicSoldier basicSoldier = new BasicSoldier(100, 50, 30);
 
-            battlefield.Run();
+            basicSoldier.ShowInfo();
         }
     }
 }

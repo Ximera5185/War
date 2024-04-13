@@ -8,7 +8,7 @@ namespace War
 {
     internal class Soldier
     {
-        public Soldier(int health, int damage, int armor, bool isDamageMultiplier, bool isMultipleUnitAttack, bool isRepeatAttack)
+        public Soldier(int health, int damage, int armor)
         {
             Health = health;
 
@@ -16,21 +16,21 @@ namespace War
 
             Armor = armor;
 
-            IsDamageMultiplier = isDamageMultiplier;
+           /* IsDamageMultiplier = isDamageMultiplier;
 
             IsMultipleUnitAttack = isMultipleUnitAttack;
 
-            IsRepeatAttack = isRepeatAttack;
+            IsRepeatAttack = isRepeatAttack;*/
         }
 
-        public int Health { get; private set; }
-        public int Damage { get; private set; }
-        public int Armor { get; private set; }
+        public int Health { get; protected set; }
+       private protected int Damage { get; private set; }
+       private protected int Armor { get; private set; }
 
-        public bool IsDamageMultiplier { get; private set; }    // Множитель урона
-        public bool IsMultipleUnitAttack { get; private set; }  // Умение атаковать нескольких солдат
-        public bool IsRepeatAttack { get; private set; }       // Умение повторить атаку
-
+      /*private  protected bool IsDamageMultiplier { get; private set; }    // Множитель урона
+       private protected bool IsMultipleUnitAttack { get; private set; }  // Умение атаковать нескольких солдат
+      private  protected bool IsRepeatAttack { get; private set; }       // Умение повторить атаку
+*/
 
         public void TakeDmage(Soldier soldier)
         {

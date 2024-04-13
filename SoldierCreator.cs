@@ -41,5 +41,9 @@ namespace War
         {
             return s_random.Next(minValue,maxValue);
         }*/
+
+        // массив типов солдат и из него брать солдата в platoon
+        // Метод Create будет возвращать их в platoon
+        // метод кланирования
     }
 }

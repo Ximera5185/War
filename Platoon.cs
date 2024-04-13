@@ -28,6 +28,9 @@ namespace War
             _soldiers.Add(soldierCreator.Create(100, 15, 80, true, false, false));
             _soldiers.Add(soldierCreator.Create(100, 25, 90, false, true, false));
             _soldiers.Add(soldierCreator.Create(100, 30, 100, false, true, true));
+
+
+            
         }
 
         public string Name { get; private set; }
