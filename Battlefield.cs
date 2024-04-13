@@ -23,7 +23,15 @@ namespace War
 
             platoon.ShowInfo();
 
-            platoon2.ShowInfo();
+            platoon2.ShowInfo();    
+        }
+
+        private void StartBattle(Platoon platoon1,Platoon platoon2) 
+        {
+            while (platoon1._soldiers.Count > 0 || platoon2._soldiers.Count > 0)
+            {
+                
+            }
         }
     }
 }

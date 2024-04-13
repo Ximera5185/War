@@ -8,7 +8,7 @@ namespace War
 {
     internal class Platoon
     {
-        private List<Soldier> _soldiers = new List<Soldier>();
+        public List<Soldier> _soldiers = new List<Soldier>();
         
         public Platoon()
         {
@@ -42,6 +42,14 @@ namespace War
             }
 
             Console.WriteLine();
+        }
+
+        public void Attack(List<Soldier> soldiers) 
+        {
+            for (int i = 0; i < soldiers.Count; i++)
+            {
+                soldiers[i].Attack();
+            }
         }
 
         private string GetName() 
