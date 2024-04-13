@@ -10,13 +10,9 @@ namespace War
     {
         static void Main(string [] args)
         {
-            Platoon platoon = new Platoon();
+            Battlefield battlefield = new Battlefield();
 
-            Platoon platoon2 = new Platoon();
-
-            platoon.ShowInfo();
-
-            platoon2.ShowInfo();
+            battlefield.Run();
         }
     }
 }

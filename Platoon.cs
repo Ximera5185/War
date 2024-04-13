@@ -9,26 +9,46 @@ namespace War
     internal class Platoon
     {
         private List<Soldier> _soldiers = new List<Soldier>();
-
-        private int _value = 100;
-
+        
         public Platoon()
         {
-            SoldierCreator creatorSoldier = new SoldierCreator();
-           
+           /* int numberSoldiers = 4;
 
-            for (int i = 0; i < 10; i++)
+            SoldierCreator creatorSoldier = new SoldierCreator();
+
+            for (int i = 0; i < numberSoldiers; i++)
             {
                 _soldiers.Add(creatorSoldier.Create());
-            }
+            }*/
+            Name = GetName();
+
+            SoldierCreator soldierCreator = new SoldierCreator();
+
+            _soldiers.Add(soldierCreator.Create(100,30,100,false,false,false));
+            _soldiers.Add(soldierCreator.Create(100, 15, 80, true, false, false));
+            _soldiers.Add(soldierCreator.Create(100, 25, 90, false, true, false));
+            _soldiers.Add(soldierCreator.Create(100, 30, 100, false, true, true));
         }
+
+        public string Name { get; private set; }
 
         public void ShowInfo()
         {
+            Console.WriteLine($"Взвод : {Name}");
+
             foreach (Soldier soldier in _soldiers)
             {
                 soldier.ShowInfo();
             }
+
+            Console.WriteLine();
+        }
+
+        private string GetName() 
+        {
+            Console.WriteLine("Введите название взвода");
+
+            return Console.ReadLine();
         }
     }
 }
