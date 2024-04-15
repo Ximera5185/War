@@ -17,32 +17,26 @@ namespace War
             Armor = armor;
         }
 
-        private protected int Health { get; private set; }
-        private protected int Damage { get; private set; }
-        private protected int Armor { get; private set; }
+        public int Health { get; protected set; }
+        public int Damage { get; protected set; }
+        public int Armor { get; protected set; }
 
-        public void TakeDmage(Soldier soldier)
-        {
-            int minValueArmor = 0;
-
-            if (Armor <= minValueArmor)
-            {
-                Health -= soldier.Damage;
-            }
-            else
-            {
-                Armor -= soldier.Damage;
-            }
-        }
-
-        public void Attack()
+        public void TakeDmage()
         {
 
         }
 
-        public void ShowInfo()
+        public virtual void Attack()
         {
-            Console.WriteLine($" Солдат: Здоровье - {Health} Дамаг - {Damage} Броня - {Armor} Множитель урона - {IsDamageMultiplier} Атака нескольких солдат - {IsMultipleUnitAttack} Умение повторить атаку - {IsRepeatAttack}");
+        }
+
+        public virtual void Attack(List<Soldier> enemies) 
+        {
+        }
+
+        public virtual void ShowInfo()
+        {
+            Console.WriteLine($" Солдат: Здоровье - {Health} Дамаг - {Damage} Броня - {Armor} ");
         }
     }
 }

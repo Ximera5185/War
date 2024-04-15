@@ -10,12 +10,21 @@ namespace War
     {
         public MedicSoldier(int health, int damage, int armor) : base(health, damage, armor) 
         {
-            IsMultipleUnitAttack = true;
+           
 
-            IsRepeatAttack = true;
         }
 
-        private protected bool IsMultipleUnitAttack { get; private set; }  // Умение атаковать нескольких солдат
-        private protected bool IsRepeatAttack { get; private set; }       // Умение повторить атаку
+          // Умение атаковать нескольких солдат
+       
+
+        public override void Attack(List<Soldier> enemies)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                int index = new Random().Next(enemies.Count);
+
+                enemies [index].TakeDmage();
+            }
+        }
     }
 }

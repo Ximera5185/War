@@ -8,11 +8,18 @@ namespace War
 {
     internal class ArmoredSoldier : Soldier
     {
+        private int _isDamageMultiplier = 2;
+
         public ArmoredSoldier(int health, int damage, int armor) : base(health, damage, armor)
         {
-            IsDamageMultiplier = true;
+            
         }
 
-        private protected bool IsDamageMultiplier { get; private set; } // Множитель урона
+        public override void Attack()
+        {
+            int currentDamage = Damage * _isDamageMultiplier;
+
+            base.Attack();
+        }
     }
 }
