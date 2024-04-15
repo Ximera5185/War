@@ -10,7 +10,7 @@ namespace War
     {
         static void Main(string [] args)
         {
-            BasicSoldier basicSoldier = new BasicSoldier(100, 50, 30);
+            Gunman basicSoldier = new Gunman(100, 50, 30);
 
             basicSoldier.ShowInfo();
         }

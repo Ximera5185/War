@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace War
 {
-    internal class BasicSoldier : Soldier
+    internal class Gunman : Soldier
     {
-        public BasicSoldier(int health, int damage, int armor) : base(health,damage,armor)
+        public Gunman(int health, int damage, int armor) : base(health,damage,armor)
         {
         
         }
