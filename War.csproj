@@ -46,6 +46,7 @@
     <Compile Include="ArmoredSoldier.cs" />
     <Compile Include="Gunman.cs" />
     <Compile Include="Battlefield.cs" />
+    <Compile Include="MedicSoldier.cs" />
     <Compile Include="SoldierCreator.cs" />
     <Compile Include="Platoon.cs" />
     <Compile Include="Program.cs" />

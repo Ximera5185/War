@@ -15,22 +15,11 @@ namespace War
             Damage = damage;
 
             Armor = armor;
-
-           /* IsDamageMultiplier = isDamageMultiplier;
-
-            IsMultipleUnitAttack = isMultipleUnitAttack;
-
-            IsRepeatAttack = isRepeatAttack;*/
         }
 
-        public int Health { get; protected set; }
-       private protected int Damage { get; private set; }
-       private protected int Armor { get; private set; }
-
-      /*private  protected bool IsDamageMultiplier { get; private set; }    // Множитель урона
-       private protected bool IsMultipleUnitAttack { get; private set; }  // Умение атаковать нескольких солдат
-      private  protected bool IsRepeatAttack { get; private set; }       // Умение повторить атаку
-*/
+        private protected int Health { get; private set; }
+        private protected int Damage { get; private set; }
+        private protected int Armor { get; private set; }
 
         public void TakeDmage(Soldier soldier)
         {

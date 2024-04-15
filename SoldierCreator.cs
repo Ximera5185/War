@@ -11,36 +11,25 @@ namespace War
     {
         private static Random s_random = new Random();
 
-        public Soldier Create(int health, int damage, int armor, bool isDamageMultiplier, bool isMultipleUnitAttack, bool isRepeatAttack)
+        private List<Soldier> units = new List<Soldier>();
+
+        public SoldierCreator() 
         {
-            return new Soldier(health, damage, armor, isDamageMultiplier, isMultipleUnitAttack, isRepeatAttack);
+            AddUnitsList(units);
         }
+      
 
-       /* public Soldier Create()
+        public Soldier GetUnit() 
         {
-            int health = GetRandomValue(100,100);
-            int damage = GetRandomValue(10,50);
-            int armor = GetRandomValue(50,100);
-
-            bool isDamageMultiplier = GetRandomBoolen();
-            bool isMultipleUnitAttack = GetRandomBoolen();
-            bool isRepeatAttack = GetRandomBoolen();
-
-            return new Soldier(health, damage, armor, isDamageMultiplier, isMultipleUnitAttack, isRepeatAttack);
-        }*/
-        // Не нравится мне этот метод так как в задаче указаны конкретные пораметры каждого солдата и конкретное колличество
-
-      /*  private bool GetRandomBoolen()
+            return
+        }
+        private void AddUnitsList(List<Soldier> soldiers) 
         {
-            bool [] bools = { true, false };
-
-            return bools [s_random.Next(bools.Length)];
-        }*/
-
-        /*private int GetRandomValue(int minValue,int maxValue)
-        {
-            return s_random.Next(minValue,maxValue);
-        }*/
+            soldiers.Add(new Gunman(100,10,100));
+            soldiers.Add(new ArmoredSoldier(100,10,100));
+            soldiers.Add(new SpecialForcesSoldiers(100,10,100));
+            soldiers.Add(new MedicSoldier(100,10,100));
+        }
 
         // массив типов солдат и из него брать солдата в platoon
         // Метод Create будет возвращать их в platoon
