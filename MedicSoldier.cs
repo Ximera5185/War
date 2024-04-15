@@ -15,16 +15,23 @@ namespace War
         }
 
           // Умение атаковать нескольких солдат
-       
+       // Атакованные солдаты могут повторятся
 
         public override void Attack(List<Soldier> enemies)
         {
-            for (int i = 0; i < 3; i++)
+            int quantityUnitsAttacked = 3;
+
+            for (int i = 0; i < quantityUnitsAttacked; i++)
             {
                 int index = new Random().Next(enemies.Count);
 
                 enemies [index].TakeDmage();
             }
+        }
+
+        public override void ShowInfo()
+        {
+            base.ShowInfo();
         }
     }
 }

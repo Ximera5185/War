@@ -21,7 +21,7 @@ namespace War
 
         public Soldier GetUnit() 
         {
-            return
+            return new Soldier();
         }
         private void AddUnitsList(List<Soldier> soldiers) 
         {

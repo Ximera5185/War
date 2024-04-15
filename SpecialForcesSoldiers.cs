@@ -15,10 +15,12 @@ namespace War
         }
 
         // Умение атаковать нескольких солдат реализованно в методе атаки
-
+        // Не могут повторятся атакованные солдаты, поэтому мы удоляем их из листа
         public override void Attack(List<Soldier> enemies)
         {
-            for (int i = 0; i < 3; i++)
+            int quantityUnitsAttacked = 3;
+
+            for (int i = 0; i < quantityUnitsAttacked; i++)
             {
                 int index = new Random().Next(enemies.Count);
 
@@ -26,6 +28,11 @@ namespace War
 
                 enemies.RemoveAt(index);
             }
+        }
+
+        public override void ShowInfo()
+        {
+            base.ShowInfo();
         }
     }
 }

@@ -21,17 +21,19 @@ namespace War
         public int Damage { get; protected set; }
         public int Armor { get; protected set; }
 
-        public void TakeDmage()
+        public void TakeDmage(int damage)
         {
-
+            Health -= damage;
         }
 
-        public virtual void Attack()
+        public virtual void Attack(Soldier target)
         {
+            target.TakeDmage(Damage);
         }
 
         public virtual void Attack(List<Soldier> enemies) 
         {
+            
         }
 
         public virtual void ShowInfo()

@@ -22,5 +22,10 @@ namespace War
         {
             base.Attack();
         }
+
+        public override void ShowInfo()
+        {
+            base.ShowInfo();
+        }
     }
 }
