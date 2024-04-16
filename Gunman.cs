@@ -11,16 +11,15 @@ namespace War
     {
         public Gunman(int health, int damage, int armor) : base(health, damage, armor)
         {
-
         }
 
-        public Gunman() : base(100,10,5)
+        public Gunman() : base(1,1,1)
         {
         }
 
-        public override void Attack()
+        public override void Attack(Soldier target)
         {
-            base.Attack();
+            base.Attack(target);
         }
 
         public override void ShowInfo()

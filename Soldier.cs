@@ -33,7 +33,6 @@ namespace War
 
         public virtual void Attack(List<Soldier> enemies) 
         {
-            
         }
 
         public virtual void ShowInfo()

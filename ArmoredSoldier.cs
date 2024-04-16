@@ -12,14 +12,21 @@ namespace War
 
         public ArmoredSoldier(int health, int damage, int armor) : base(health, damage, armor)
         {
-            
         }
 
-        public override void Attack()
+        public ArmoredSoldier() : base(2, 2, 2)
         {
-            int currentDamage = Damage * _isDamageMultiplier;
+        }
 
-            base.Attack();
+        public override void Attack(Soldier target)
+        {
+            int defaultDamage = Damage;
+
+            Damage *= _isDamageMultiplier;
+
+            base.Attack(target);
+
+            Damage = defaultDamage;
         }
 
         public override void ShowInfo()

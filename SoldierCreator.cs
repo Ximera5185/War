@@ -9,26 +9,31 @@ namespace War
 {
     internal class SoldierCreator
     {
-        private static Random s_random = new Random();
+        private static Random s_random = new Random();// TODO сделать отдельный класс утилита для получения значения рандома
 
-        private List<Soldier> units = new List<Soldier>();
+        private List<Soldier> _units = new List<Soldier>();
 
         public SoldierCreator() 
         {
-            AddUnitsList(units);
+            AddUnitsList();
         }
       
 
-        public Soldier GetUnit() 
+        public Soldier GetRandomUnit() 
         {
-            return new Soldier();
+            int index = s_random.Next(_units.Count);
+
+            Soldier soldier = new Soldier(_units [index].Health, _units [index].Damage, _units [index].Armor);
+
+            return soldier;
         }
-        private void AddUnitsList(List<Soldier> soldiers) 
+
+        private void AddUnitsList() 
         {
-            soldiers.Add(new Gunman(100,10,100));
-            soldiers.Add(new ArmoredSoldier(100,10,100));
-            soldiers.Add(new SpecialForcesSoldiers(100,10,100));
-            soldiers.Add(new MedicSoldier(100,10,100));
+            _units.Add(new Gunman());
+            _units.Add(new ArmoredSoldier());
+            _units.Add(new SpecialForcesSoldiers());
+            _units.Add(new MedicSoldier());
         }
 
         // массив типов солдат и из него брать солдата в platoon

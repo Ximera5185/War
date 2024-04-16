@@ -8,20 +8,13 @@ namespace War
 {
     internal class Platoon
     {
-        SoldierCreator soldierCreator = new SoldierCreator();
-
-        public List<Soldier> _soldiers = new List<Soldier>();
+        private List<Soldier> _soldiers = new List<Soldier>();
         
-        public Platoon()
+        public Platoon(string name)
         {
-            Name = GetName();
+            Name = name;
 
-            SoldierCreator soldierCreator = new SoldierCreator();
-
-            _soldiers.Add(SoldierCreator.);
-            _soldiers.Add(soldierCreator.Create(100, 15, 80, true, false, false));
-            _soldiers.Add(soldierCreator.Create(100, 25, 90, false, true, false));
-            _soldiers.Add(soldierCreator.Create(100, 30, 100, false, true, true));
+            Fill();
         }
 
         public string Name { get; private set; }
@@ -41,6 +34,18 @@ namespace War
         public void Attack(List<Soldier> soldiers) 
         {
           
+        }
+
+        private void Fill() 
+        {
+            SoldierCreator soldierCreator = new SoldierCreator();
+
+            int countSoldiers = 7;
+
+            for (int i = 0; i < countSoldiers; i++)
+            {
+                _soldiers.Add(soldierCreator.GetRandomUnit());
+            }
         }
 
         private string GetName() 

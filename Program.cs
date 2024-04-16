@@ -10,9 +10,14 @@ namespace War
     {
         static void Main(string [] args)
         {
-            Gunman basicSoldier = new Gunman(100, 50, 30);
+            Platoon platoon1 = new Platoon("1");
+            Platoon platoon2 = new Platoon("2");
 
-            basicSoldier.ShowInfo();
+            platoon1.ShowInfo();
+
+            Console.WriteLine("+++++++++++++++++++++");
+
+            platoon2.ShowInfo();
         }
     }
 }

@@ -10,12 +10,15 @@ namespace War
     {
         public MedicSoldier(int health, int damage, int armor) : base(health, damage, armor) 
         {
-           
-
         }
 
-          // Умение атаковать нескольких солдат
-       // Атакованные солдаты могут повторятся
+        public MedicSoldier() : base(4, 4, 4)
+        {
+        }
+
+        // переименовать в гринадера
+        // Умение атаковать нескольких солдат
+        // Атакованные солдаты могут повторятся
 
         public override void Attack(List<Soldier> enemies)
         {
@@ -23,9 +26,9 @@ namespace War
 
             for (int i = 0; i < quantityUnitsAttacked; i++)
             {
-                int index = new Random().Next(enemies.Count);
+                int index = new Random().Next(enemies.Count); // TODO сделать отдельный класс утилита для получения значения рандома
 
-                enemies [index].TakeDmage();
+                enemies [index].TakeDmage(Damage);
             }
         }
 
