@@ -8,11 +8,11 @@ namespace War
 {
     internal class SpecialForcesSoldiers : Soldier
     {
-        public SpecialForcesSoldiers(int health, int damage, int armor) : base(health, damage, armor)
+        public SpecialForcesSoldiers(int health, int damage, int armor, string name) : base(health, damage, armor, name)
         {
         }
 
-        public SpecialForcesSoldiers() : base(3, 3, 3)
+        public SpecialForcesSoldiers() : base(3, 3, 3, "Спецназ")
         {
         }
 

@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace War
 {
-    internal class MedicSoldier : Soldier
+    internal class Grenadier : Soldier
     {
-        public MedicSoldier(int health, int damage, int armor) : base(health, damage, armor) 
+        public Grenadier(int health, int damage, int armor, string name) : base(health, damage, armor, name) 
         {
         }
 
-        public MedicSoldier() : base(4, 4, 4)
+        public Grenadier() : base(4, 4, 4, "Гренадер")
         {
         }
 
-        // переименовать в гринадера
         // Умение атаковать нескольких солдат
         // Атакованные солдаты могут повторятся
 

@@ -10,11 +10,11 @@ namespace War
     {
         private int _isDamageMultiplier = 2;
 
-        public ArmoredSoldier(int health, int damage, int armor) : base(health, damage, armor)
+        public ArmoredSoldier(int health, int damage, int armor, string name) : base(health, damage, armor, name)
         {
         }
 
-        public ArmoredSoldier() : base(2, 2, 2)
+        public ArmoredSoldier() : base(2, 2, 2, "Бронированный")
         {
         }
 

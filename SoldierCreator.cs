@@ -33,7 +33,7 @@ namespace War
             _units.Add(new Gunman());
             _units.Add(new ArmoredSoldier());
             _units.Add(new SpecialForcesSoldiers());
-            _units.Add(new MedicSoldier());
+            _units.Add(new Grenadier());
         }
 
         // массив типов солдат и из него брать солдата в platoon
