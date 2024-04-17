@@ -8,13 +8,12 @@ namespace War
 {
     internal class Grenadier : Soldier
     {
-        public Grenadier(int health, int damage, int armor) : base(health, damage, armor) 
+        public Grenadier(int health, int damage, int armor, string name) : base(health, damage, armor, name) 
         {
         }
 
-        public Grenadier() : base(4, 4, 4)
+        public Grenadier() : base(4, 4, 4, "Гренадер")
         {
-            Name = "Гренадер";
         }
 
         // Умение атаковать нескольких солдат

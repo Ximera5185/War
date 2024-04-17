@@ -22,7 +22,7 @@ namespace War
         {
             int index = s_random.Next(_units.Count);
 
-            Soldier soldier = new Soldier(_units [index].Health, _units [index].Damage, _units [index].Armor);
+            Soldier soldier = new Soldier(_units [index].Health, _units [index].Damage, _units [index].Armor,_units [index].Name );
 
             return soldier;
         }

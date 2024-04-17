@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,13 +11,12 @@ namespace War
     {
         private int _isDamageMultiplier = 2;
 
-        public ArmoredSoldier(int health, int damage, int armor) : base(health, damage, armor)
+        public ArmoredSoldier(int health, int damage, int armor, string name) : base(health, damage, armor,name)
         {
         }
 
-        public ArmoredSoldier() : base(2, 2, 2)
+        public ArmoredSoldier() : base(2, 2, 2, "Бронированный")
         {
-            Name = "Бронированный";
         }
 
         public override void Attack(Soldier target)

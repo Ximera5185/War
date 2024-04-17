@@ -8,13 +8,15 @@ namespace War
 {
     internal class Soldier
     {
-        public Soldier(int health, int damage, int armor)
+        public Soldier(int health, int damage, int armor, string name)
         {
             Health = health;
 
             Damage = damage;
 
             Armor = armor;
+
+            Name = name;
         }
 
         public string Name { get; protected set; }
