@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace War
 {
@@ -24,7 +21,7 @@ namespace War
 
             for (int i = 0; i < quantityUnitsAttacked; i++)
             {
-                int index = new Random().Next(enemies.Count); // TODO сделать отдельный класс утилита для получения значения рандома
+                int index = UserUtils.GetRandomNumber(enemies.Count);
 
                 enemies [index].TakeDmage(Damage);
 
