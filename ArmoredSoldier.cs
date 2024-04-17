@@ -10,12 +10,13 @@ namespace War
     {
         private int _isDamageMultiplier = 2;
 
-        public ArmoredSoldier(int health, int damage, int armor, string name) : base(health, damage, armor, name)
+        public ArmoredSoldier(int health, int damage, int armor) : base(health, damage, armor)
         {
         }
 
-        public ArmoredSoldier() : base(2, 2, 2, "Бронированный")
+        public ArmoredSoldier() : base(2, 2, 2)
         {
+            Name = "Бронированный";
         }
 
         public override void Attack(Soldier target)

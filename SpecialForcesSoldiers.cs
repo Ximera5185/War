@@ -8,12 +8,13 @@ namespace War
 {
     internal class SpecialForcesSoldiers : Soldier
     {
-        public SpecialForcesSoldiers(int health, int damage, int armor, string name) : base(health, damage, armor, name)
+        public SpecialForcesSoldiers(int health, int damage, int armor) : base(health, damage, armor)
         {
         }
 
-        public SpecialForcesSoldiers() : base(3, 3, 3, "Спецназ")
+        public SpecialForcesSoldiers() : base(3, 3, 3)
         {
+            Name = "Спецназ";
         }
 
         // Умение атаковать нескольких солдат реализованно в методе атаки

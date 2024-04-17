@@ -18,7 +18,6 @@ namespace War
             AddUnitsList();
         }
       
-
         public Soldier GetRandomUnit() 
         {
             int index = s_random.Next(_units.Count);

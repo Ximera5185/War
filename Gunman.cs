@@ -9,12 +9,13 @@ namespace War
 {
     internal class Gunman : Soldier
     {
-        public Gunman(int health, int damage, int armor, string name) : base(health, damage, armor, name)
+        public Gunman(int health, int damage, int armor, string name) : base(health, damage, armor)
         {
         }
 
-        public Gunman() : base(1,1,1,"Ганмен")
+        public Gunman() : base(1,1,1)
         {
+            Name = "Ганмен";
         }
 
         public override void Attack(Soldier target)
