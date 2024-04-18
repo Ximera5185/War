@@ -6,9 +6,9 @@ namespace War
     {
         private static Random s_random = new Random();
 
-        static public int GetRandomNumber(int minValue, int maxValue) 
+        static public int GetRandomNumber(int minValue, int maxValue)
         {
-            return s_random.Next(minValue, maxValue); 
+            return s_random.Next(minValue, maxValue);
         }
 
         static public int GetRandomNumber(int value)

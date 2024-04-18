@@ -14,6 +14,8 @@ namespace War
             Console.WriteLine("+++++++++++++++++++++");
 
             platoon2.ShowInfo();
+
+            
         }
     }
 }

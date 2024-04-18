@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace War
 {
@@ -28,9 +29,22 @@ namespace War
             Console.WriteLine();
         }
 
-        public void Attack(List<Soldier> soldiers) 
+        public void Attack(Platoon enemies) 
         {
-          
+            for (int i = 0; i < _soldiers.Count; i++)
+            {
+                _soldiers [i].Attack(enemies.GetSoldiers());
+            } 
+        }
+
+        public Soldier GetRandomSoldier() 
+        {
+            return _soldiers [UserUtils.GetRandomNumber(_soldiers.Count)];
+        }
+
+        public List<Soldier> GetSoldiers() 
+        {
+            return new List<Soldier>(_soldiers);
         }
 
         private void Fill() 
