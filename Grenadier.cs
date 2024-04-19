@@ -8,12 +8,9 @@ namespace War
         {
         }
 
-        public Grenadier() : base(4, 4, 4, "Гренадер")
+        public Grenadier() : base(100, 20, 100, "Гренадер")
         {
         }
-
-        // Умение атаковать нескольких солдат
-        // Атакованные солдаты могут повторятся
 
         public override void Attack(List<Soldier> enemies)
         {

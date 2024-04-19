@@ -32,8 +32,9 @@ namespace War
             target.TakeDmage(Damage);
         }
 
-        public virtual void Attack(List<Soldier> enemies) 
+        public virtual void Attack(List<Soldier> enemies)
         {
+            enemies [UserUtils.GetRandomNumber(enemies.Count)].TakeDmage(Damage);
         }
 
         public virtual void ShowInfo()

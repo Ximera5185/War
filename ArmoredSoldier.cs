@@ -1,4 +1,6 @@
-﻿namespace War
+﻿using System.Collections.Generic;
+
+namespace War
 {
     internal class ArmoredSoldier : Soldier
     {
@@ -8,17 +10,17 @@
         {
         }
 
-        public ArmoredSoldier() : base(2, 2, 2, "Бронированный")
+        public ArmoredSoldier() : base(100, 20, 100, "Бронированный")
         {
         }
 
-        public override void Attack(Soldier target)
+        public override void Attack(List<Soldier> enemies)
         {
             int defaultDamage = Damage;
 
             Damage *= _damageMultiplier;
 
-            base.Attack(target);
+            enemies [UserUtils.GetRandomNumber(enemies.Count)].TakeDmage(Damage);
 
             Damage = defaultDamage;
         }

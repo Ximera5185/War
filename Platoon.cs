@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace War
 {
@@ -16,6 +15,8 @@ namespace War
         }
 
         public string Name { get; private set; }
+     
+        public int Count => _soldiers.Count;
 
         public void ShowInfo()
         {
@@ -47,6 +48,17 @@ namespace War
             return new List<Soldier>(_soldiers);
         }
 
+        public void RemoveDeadSoldier()
+        {
+            for (int i = _soldiers.Count - 1; i >= 0; i--)
+            {
+                if (_soldiers[i].Health <= 0)
+                {
+                    _soldiers.Remove(_soldiers[i]);
+                }
+            }
+        }
+
         private void Fill() 
         {
             SoldierCreator soldierCreator = new SoldierCreator();
@@ -57,13 +69,6 @@ namespace War
             {
                 _soldiers.Add(soldierCreator.GetRandomUnit());
             }
-        }
-
-        private string GetName() 
-        {
-            Console.WriteLine("Введите название взвода");
-
-            return Console.ReadLine();
         }
     }
 }

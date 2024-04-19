@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
+
 namespace War
 {
     internal class Gunman : Soldier
@@ -9,13 +8,13 @@ namespace War
         {
         }
 
-        public Gunman() : base(1,1,1, "Ганмен")
+        public Gunman() : base(100,20,100, "Ганмен")
         {
         }
 
-        public override void Attack(Soldier target)
+        public override void Attack(List<Soldier> enemies)
         {
-            base.Attack(target);
+            enemies [UserUtils.GetRandomNumber(enemies.Count)].TakeDmage(Damage);
         }
 
         public override void ShowInfo()

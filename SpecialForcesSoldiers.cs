@@ -8,12 +8,10 @@ namespace War
         {
         }
 
-        public SpecialForcesSoldiers() : base(3, 3, 3, "Спецназ")
+        public SpecialForcesSoldiers() : base(100, 40, 100, "Спецназ")
         {
         }
 
-        // Умение атаковать нескольких солдат реализованно в методе атаки
-        // Не могут повторятся атакованные солдаты, поэтому мы удоляем их из листа
         public override void Attack(List<Soldier> enemies)
         {
             int quantityUnitsAttacked = 3;
